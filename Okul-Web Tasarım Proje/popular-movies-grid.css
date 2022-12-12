@@ -1,0 +1,117 @@
+.popular-grid{ 
+    margin-top: 110px;
+    position: absolute;
+    transform: translate(120%,0%);
+    display: grid;
+    width: 35%;
+    min-width: 400px;
+    max-width: 550px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 66px 111px 185px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.pop-heading{
+    color: rgba(240, 255, 255, 0.671);
+    font-size: 15px;
+}
+.popular-grid a{
+    text-decoration: none;
+    color: white;
+}
+
+.pop-box{
+    height: auto;
+    border-top:2px solid #90b6c5b4 ;
+    padding-top:24px;
+    padding-bottom: 24px;
+}
+.pop-left{
+    width: 25%;
+    min-width: 25%;
+    float: left;
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.pop-right{
+    margin-left: -10px;
+    margin-top: -5px;
+    display:block;
+    
+}
+.pop-movie-pics{
+    height:130px;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.15s;
+}
+.pop-movie-pics:hover{
+    box-shadow: 0 0 5px 4px  #00e054;
+    border-radius: 5px;
+}
+.pop-movie-pics-row{
+    display:block;
+}
+
+ .pop-movie-name{
+    font-weight: 800;
+    font-size: 1.4em;
+    color:white;
+    
+}
+.pop-movie-name a:hover, .pop-movie-year:hover, .pop-user-name:hover{
+    color:#40bcf4;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.pop-movie-year{
+    color: rgba(240, 255, 255, 0.671);
+    font-weight: 200;
+    font-size: 1.23rem;
+    margin-left: 15px;
+}
+.pop-user-details{
+    display: flex;
+}
+.pop-user-pic{
+   position: relative; 
+   width: 35px;
+   height: 35px;
+   overflow: hidden;  
+   border-radius: 50%;
+   object-fit:cover;
+   object-position: center;
+}
+.user-pic{
+    float: left;
+
+}
+.user-infos{
+    margin-left: -5px;
+    margin-top: 10px;
+    text-align:center;
+    display: flex;
+    align-items: center;    
+}
+
+.pop-user-name{
+    color: rgba(240, 255, 255, 0.596);
+    font-size: .8em;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.pop-user-critic{
+    color: rgb(149,165,181);
+    width: 60%;
+    float: left;
+    margin-top: 10px;
+}
+.pop-user-star-rate{
+margin-left: 10px;
+color: rgb(149,165,181);
+}
+.pop-critic-likes{
+
+}
