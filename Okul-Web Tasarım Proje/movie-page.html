@@ -12,7 +12,7 @@
     
         .movie-section{
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
             align-content: center;
             flex-direction: column;
@@ -36,7 +36,7 @@
         margin-top: 10px;
         }
         .movie-img{
-            height:426px;
+            height:421px;
             margin-right: 5px;
             border:4px solid rgba(0, 0, 0, 0.705)
         }
@@ -51,7 +51,7 @@
             margin-top: 50px;
             /* list-style:circle; */
         }
-        .left-section{
+        .left-section ,.right-section{
             text-align: center;
             justify-content: center;
             display: flex;
@@ -61,10 +61,11 @@
         .right-section{
             
         }
-        .movie-details{
+        .movie-year-time{
             color: rgba(240, 255, 255, 0.671);
             display: flex;
             flex-direction: row;
+            
         }
        
         .movie-name{
@@ -74,7 +75,7 @@
         }
         .movie-year{
             margin-right: 15px;
-            style: circle;
+        
         }
         .moive-time{
 
@@ -112,10 +113,53 @@
             transition: 0.15s;
         }
         
+        
+        .movie-details{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.74);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.74);
+            padding: 10px;
+        }
+        .movie-cast{
+            display: block;
+    }
+        
+         .movie-cast th{
+            font-size: 20px;
+            padding-right:25px;
+            color:white;
+        }
+        .movie-cast td{
+           
+            border: 1px solid;
+            margin:3px;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 5px;
+            color:rgb(25, 115, 151);
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+        .movie-cast td:hover{
+            cursor:pointer;
+            background-color:rgb(25, 115, 151);
+            color:rgb(28, 34, 39);
+        }
+       
+        .movie-tag-section{
+            display: flex;
+            margin-left: 30%;
+        } 
+        .movie-tag{ 
+
+        }
         .review-grid{
             margin-top: 110px;
             position: absolute;
-            transform: translate(62%,0%);
+            transform: translate(20%,0%);
             -ms-transform: translate(62%,0%);
             display: grid;
             width: 70%;
@@ -163,6 +207,8 @@
             padding-left: 15px;
             border-radius: 10px;
         }
+         
+
         
         
     </style>
@@ -199,7 +245,7 @@
         <div class = "movie-header">
         <div class = "left-section">
             <h2 class = "movie-name">Godfather 2</h2>
-            <div class="movie-details">
+            <div class="movie-year-time">
 
                     <div class="movie-year">1974</div>
                     <div class = "movie-time">3h 22m</div>
@@ -243,6 +289,34 @@
         <div class = "youtube-trailer">
             <iframe width="746" height="420"class = "youtube-video" src="https://www.youtube.com/embed/9O1Iy9od7-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+    </div>
+    <div class = "movie-details">
+        <div class="movie-cast">
+            
+        <table>
+            <tr>
+                <th>Director</th>
+                <td>Francis Ford Coppola</td>
+            </tr>
+            <tr>
+                <th>Writers</th>
+                <td>Francis Ford Coppola</td>
+            </tr>
+            <tr>
+                <th>Stars</th>
+                <td>Al Pacino</td>
+                <td>Robert De Niro</td>
+                <td>Robert Duvall</td>
+            </tr>
+        </table>
+        </div>
+    <div class = "movie-tag-section">
+        <div class="movie-tag">Drama</div>
+        <div class="movie-tag">Crime</div>
+
+    </div>
+</div>
+
     </div>
 </div>
 <div class = "review-grid">
