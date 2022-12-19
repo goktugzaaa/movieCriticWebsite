@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    *{
+        padding: 0;
+        margin:0;
+    }
+    main{
+    
+        vertical-align: middle;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+       
+    }
+    .sign-form{
+        width: 40%;
+        ;
+        height: 220%;
+        text-align: center;
+        display: inline-block;
+        border: 2px solid rgba(172, 167, 167, 0.8)
+    }
+    input [type = "text"],input [type = "password"]{
+        width: 120%;
+        padding:12px 20px;
+        margin:8ps 0;
+        display: inline-block;
+        box-sizing: border-box;
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <main>
+
+            <div class = "container">
+                
+                <form class = "sign-form" action="" method ="post">
+                    
+            <div class = "imgcontainer">CineScope©</div>
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name = "uname" required>
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name = "psw" required>
+            <button type = "submit">Login</button>
+            <label>
+            <input type="checkbox" checked = "checked" name = "remember">
+        </label>
+                </form>
+            </div>
+        
+    </main>
+
+</body>
+</html>

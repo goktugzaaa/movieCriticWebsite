@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="popular-movies-grid.css">
+    <style>
+    
+        .movie-section{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.603);
+            padding: 40px;
+            
+        }
+        #movie-page{
+            background-color: rgba(0, 0, 0, 0.616);
+        }
+        header{
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.616);
+        }
+        main{
+        }
+        .movie-contexts{
+        padding-top: 15px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
+        .movie-img{
+            height:421px;
+            margin-right: 5px;
+            border:4px solid rgba(0, 0, 0, 0.705)
+        }
+        .youtube-video{
+         }
+        
+        .movie-header{
+            color: rgba(240, 255, 255, 0.671);
+            display:flex;
+            width: 55%;
+            justify-content: space-between;
+            margin-top: 50px;
+            /* list-style:circle; */
+        }
+        .left-section ,.right-section{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-section{
+            
+        }
+        .movie-year-time{
+            color: rgba(240, 255, 255, 0.671);
+            display: flex;
+            flex-direction: row;
+            
+        }
+       
+        .movie-name{
+            color: aliceblue;
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+        .movie-year{
+            margin-right: 15px;
+        
+        }
+        .moive-time{
+
+        }
+        .ratings-grid{
+            display: grid;
+            grid-template-columns: 120px 120px 120px;
+            padding-top:15px;
+            text-align: center;
+            text-transform: uppercase;
+            
+           
+            justify-content: space-around;
+        }
+        .rating-tags{
+            font-size: 1em;
+        }
+        .rating-tags:hover{
+            text-shadow: 0px 0px 5px;
+        }
+        .points{
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2em;
+            
+        }
+        .starIcon{
+            margin-top: 2px;
+            margin-left: -4px;
+        }
+        .starIcon:hover, .points:hover{
+            color:rgba(255, 255, 0, 0.877);
+            cursor: pointer;
+            transition: 0.15s;
+        }
+        
+        
+        .movie-details{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.74);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.74);
+            padding: 10px;
+        }
+        .movie-cast{
+            display: block;
+    }
+        
+         .movie-cast th{
+            font-size: 20px;
+            padding-right:25px;
+            color:white;
+        }
+        .movie-cast td{
+           
+            border: 1px solid;
+            margin:3px;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 5px;
+            color:rgb(25, 115, 151);
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+        .movie-cast td:hover{
+            cursor:pointer;
+            background-color:rgb(25, 115, 151);
+            color:rgb(28, 34, 39);
+        }
+       
+        .movie-tag-section{
+            display: flex;
+            margin-left: 30%;
+        } 
+        .movie-tag{ 
+
+        }
+        .review-grid{
+            margin-top: 110px;
+            position: absolute;
+            transform: translate(20%,0%);
+            -ms-transform: translate(62%,0%);
+            display: grid;
+            width: 70%;
+            min-width: 400px;
+            max-width: 750px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-shadow: 0px 66px 111px 185px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .review-grid-title{
+            color:rgba(240, 248, 255, 0.788);
+            font-weight: 400;
+            margin-left: 25px;
+            
+        }
+        .review{
+            border-top:2px solid rgba(255, 255, 255, 0.685);
+            padding-top: 10px;
+            padding-bottom: 20px;
+            margin-left: 25px;
+        }
+        .review-details{
+            display:flex;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .pop-user-name{
+            font-size: 1em;
+            color:rgba(240, 248, 255, 0.8);
+        }
+
+        .review-date{
+            color: rgba(255, 255, 255, 0.801);
+            margin-left: 15px;
+            font-size: 15px;
+        }
+        .user-comment{
+            color:white;
+            background-color: rgba(128, 128, 128, 0.411);
+            padding-top:17px;
+            padding-bottom: 17px;
+            padding-left: 15px;
+            border-radius: 10px;
+        }
+         
+
+        
+        
+    </style>
+</head>
+<body>
+    <header id = "movie-page">
+        <label class="logo" for=""> <a href="index.html">LOGO</a></label>
+       <nav>
+       
+       <ul>
+        <li><a href="#">FILMS</a></li>
+        <li><a href="#">LISTS</a></li>
+        <li><a href="#">CATEGORY</a>
+        <ul class = "hidden">
+            <li><a href="#">Aksiyon</a></li>
+            <li><a href="#">Gerilim</a></li>
+            <li><a href="#">Korku</a></li>
+            <li><a href="#">Festival</a></li>
+            <li><a href="#">Dram</a></li>
+            <li><a href="#">Animasyon</a></li>
+            <li><a href="#">Komedi</a></li>
+        </ul>
+    </li>
+        <li><a href="#">JOURNAL</a></li>
+       </ul>
+    </nav>
+    <div class = "log-buttons">
+        <div><button id="sign"><a href="">Sign in</a></button></div>
+        <div><button id ="login"><a href="login-page.html">Login</a></button></div>  
+    </div>
+    </header>
+    <main>
+        <div class = "movie-section">
+        <div class = "movie-header">
+        <div class = "left-section">
+            <h2 class = "movie-name">Godfather 2</h2>
+            <div class="movie-year-time">
+
+                    <div class="movie-year">1974</div>
+                    <div class = "movie-time">3h 22m</div>
+
+            </div>
+        </div>
+        <div class = "right-section">
+            <div class="ratings-grid">
+            <div>
+
+                <div class="rating-tags">IMDb Rating</div>
+            <div class="points">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  id="iconContext-star" viewBox="0 0 24 24" fill="currentColor" role="presentation" class = "starIcon"><path d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg></div>
+                    <b>9.0</b>/10
+            </div>
+            </div>
+            <div>
+                <div class = "rating-tags">Your RATING</div>
+                <div>
+                    <div class="points">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  id="iconContext-star" viewBox="0 0 24 24" fill="currentColor" role="presentation" class = "starIcon"><path d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg></div>
+                        <div> <b>?</b>/10</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div>
+                
+                <div class = "rating-tags">POPULARITY</div>
+                <div class="points">/\/\/></div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+    <div class = "movie-contexts">
+        <div>
+            <img class = "movie-img" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR106,0,630,1200_AL_.jpg" alt="">
+        </div>
+        <div class = "youtube-trailer">
+            <iframe width="746" height="420"class = "youtube-video" src="https://www.youtube.com/embed/9O1Iy9od7-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class = "movie-details">
+        <div class="movie-cast">
+            
+        <table>
+            <tr>
+                <th>Director</th>
+                <td>Francis Ford Coppola</td>
+            </tr>
+            <tr>
+                <th>Writers</th>
+                <td>Francis Ford Coppola</td>
+            </tr>
+            <tr>
+                <th>Stars</th>
+                <td>Al Pacino</td>
+                <td>Robert De Niro</td>
+                <td>Robert Duvall</td>
+            </tr>
+        </table>
+        </div>
+    <div class = "movie-tag-section">
+        <div class="movie-tag">Drama</div>
+        <div class="movie-tag">Crime</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+<div class = "review-grid">
+    <h2 class = "review-grid-title">Son Yorumlar</h2>
+    <div class = "review">
+        <div class = "review-details">
+            <img class = "pop-user-pic"src="photos/profile-pics/indir.png" alt="">
+            <div class = "pop-user-name">Elif Deniz Yelmenoğlu</div>
+            <div class = "review-date">21/11/2022</div>
+        </div>
+        <div class="user-comment">Klasik filmlerden..Al pacinonun oyunculuğuna hayranım...</div>
+    </div>
+    <div class = "review">
+        <div class = "review-details">
+            <img class = "pop-user-pic"src="photos/profile-pics/indir.png" alt="">
+            <div class = "pop-user-name">Mert İlhan Ecevit</div>
+            <div class = "review-date">21/11/2022</div>
+        </div>
+        <div class="user-comment">Bir müslüm babayı bir de bu babayı çok severim...</div>
+    </div>
+
+
+
+
+</div>
+    </main>
+</body>
+</html>
