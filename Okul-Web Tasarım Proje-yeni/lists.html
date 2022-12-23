@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="general.css">
+    <style>
+        .lists-container{
+            margin-top: 100px;
+        }
+        
+        .user-lists{
+            display: flex;
+            margin-left: 10%;
+            width: 80%;
+            justify-content:center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-top:1px solid rgba(255,255,255,0.7);
+        }
+        .user-lists         
+        .user-details{
+            display: flex;
+            align-items: center;
+            
+        }
+        .left-side{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            margin-right: 25px;
+        }
+        .user-pic-row{
+            display: flex;
+            
+            justify-content: center;
+        }
+        .user-pic{
+            
+            display: flex;
+            width: 60px;
+            height: 60px;
+            object-fit:cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+        .user-name{
+            margin: 15px;
+            text-align: center;
+            object-fit: cover;
+            font-size: .7vw;
+            font-weight: 400;
+            color:rgba(255, 255, 255, 0.7);
+        }
+        .list-name{
+            text-align: center;
+            color:white;
+            font-size: 1.4em;
+        }
+        
+        .list-grid{
+            display: grid;
+            width: 80%;
+            height: auto;
+            padding:16px;
+            grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% ;
+            align-content: center;
+            
+            align-items: center;
+            
+        
+            
+            
+        }
+        .list-box{
+        display: flex;
+        }
+        .movie{
+        position: relative;
+        transition: 0.15s;
+        width: 100%;
+        max-width: 130px;
+    /* margin-left: 15%; */      
+       
+    
+}
+.movie:hover{
+    box-shadow: 0 0 0px 4px  #00e054;
+    border-radius: 3px;
+    
+}
+.movie-pic-row{
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+}
+.movie-pic{
+position: relative;
+border:1px solid white;
+width:auto;
+width: 100%;
+object-position: center;
+z-index: 1;
+box-shadow: 0 0  10px 61px 10px rgba(0, 0, 0, 0.9);
+}
+.overlay {
+position: absolute;
+object-fit:fill;
+bottom: 0;
+left: 0;
+right: 0;
+background-color:rgba(0, 0, 0, 0.6);
+overflow: hidden;
+width: 100%;
+transition: 0.25s;
+
+transition: .15s ;
+z-index: 15;
+}
+.movie:hover .overlay {
+height: 100%;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.movie-name{
+text-align: center;
+white-space:nowrap;
+color:white;
+position: absolute;
+z-index: 11;
+font-weight: 600;
+font-size: .7vw;
+overflow: hidden;
+bottom: 10%;
+left: 50%;
+transform: translate(-50%,10%);
+-ms-transform:translate(-50%,-10%);
+padding: 0px;
+height: 100px;
+text-shadow: 2px 2px 8px white;
+
+}
+.movie-rate{
+position: absolute;
+font-weight: 700;
+bottom:15%;
+left:50%;
+font-size:1em;
+z-index: 5;
+color:rgba(255, 255, 0, 0.925);
+text-shadow: 0px 0px 12px white;
+transform: translate(-50%,-10%);
+-ms-transform:translate(-50%,-10%);
+}
+.movie-rate span{
+    color:white;
+    font-size: 0.8em;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <label class="logo" for=""><a href="index.html">CineScope©</a></label>
+       <nav>
+       
+       <ul>
+        <li><a href="films.html">FILMS</a></li>
+        <li><a href="#">LISTS</a></li>
+        <li><a href="#">CATEGORY</a>
+        <ul class = "hidden">
+            <li><a href="#">Aksiyon</a></li>
+            <li><a href="#">Gerilim</a></li>
+            <li><a href="#">Korku</a></li>
+            <li><a href="#">Festival</a></li>
+            <li><a href="#">Dram</a></li>
+            <li><a href="#">Animasyon</a></li>
+            <li><a href="#">Komedi</a></li>
+        </ul>
+    </li>
+        <li><a href="#">JOURNAL</a></li>
+       </ul>
+    </nav>
+    <div class = "log-buttons">
+        <div><button id="sign"><a href="">Sign in</a></button></div>
+        <div><button id ="login"><a href="login-page.html">Login</a></button></div>  
+    </div>
+    </header>
+    <div class = "lists-container">
+    <div class = "user-lists">
+        <div class = "user-details"> <div class = "left-side">
+            <div class="user-pic-row">
+            <img class = "user-pic" src="photos/profile-pics/indir.png" alt="">
+            </div>
+            <div class="user-name">Mehmet Eryılmaz</div>
+        </div>
+        <div class = "list-name">Kış Gecesi Filmleri</div>
+        </div>
+    <div class = "list-grid">
+        <div class="movie">
+            <div class = "movie-pic-row"><a href="the-last-of-us-page.html">
+                <img  class =  "movie-pic"src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+            </a>
+            </div>
+            <div class="overlay">
+            <div class = "movie-name">The Last Of Us</div>
+            <div class = "movie-rate">8.5 <span>/10</span></div>
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row"> <a href="noctural-animals-page.html">
+                <img class = "movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+            </a></div>
+            <div class = overlay>
+            <div class="movie-name">Noctural Animals</div>
+            <div class="movie-rate">7.9<span>/10</span></div> 
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="shawshank-redemption-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name">Shawshank Redemption</div>
+            <div class =  "movie-rate">9.2<span>/10</span></div>
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="the-godfather-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjFiZjQ4ZTktMDllYS00M2UxLWJkY2MtOTk3NGZjZTg2MTlhXkEyXkFqcGdeQXVyOTU2NDAzNDE@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name">Godfather</div>
+            <div class =  "movie-rate">9.2<span>/10</span></div>
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="the-batman-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name">Batman</div>
+            <div class =  "movie-rate">9.0<span>/10</span></div>
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="godfather-2-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name">Godfather 2</div>
+            <div class =  "movie-rate">9.0<span>/10</span></div>
+        </div>
+    </div>
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="twelve-angry-man-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX190_CR0,6,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name">Twelve Angry Man</div>
+            <div class =  "movie-rate">9.0<span>/10</span></div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+<div class = "user-lists">
+    <div class = "user-details"> <div class = "left-side">
+        <div class="user-pic-row">
+        <img class = "user-pic" src="photos/profile-pics/indir.png" alt="">
+        </div>
+        <div class="user-name">Mehmet Eryılmaz</div>
+    </div>
+    <div class = "list-name">Kış Gecesi Filmleri</div>
+    </div>
+<div class = "list-grid">
+    <div class="movie">
+        <div class = "movie-pic-row"><a href="the-last-of-us-page.html">
+            <img  class =  "movie-pic"src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a>
+        </div>
+        <div class="overlay">
+        <div class = "movie-name">The Last Of Us</div>
+        <div class = "movie-rate">8.5 <span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row"> <a href="noctural-animals-page.html">
+            <img class = "movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a></div>
+        <div class = overlay>
+        <div class="movie-name">Noctural Animals</div>
+        <div class="movie-rate">7.9<span>/10</span></div> 
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="shawshank-redemption-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Shawshank Redemption</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-godfather-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjFiZjQ4ZTktMDllYS00M2UxLWJkY2MtOTk3NGZjZTg2MTlhXkEyXkFqcGdeQXVyOTU2NDAzNDE@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-batman-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Batman</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="godfather-2-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather 2</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="twelve-angry-man-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX190_CR0,6,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Twelve Angry Man</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+
+</div>
+</div>
+<div class = "user-lists">
+    <div class = "user-details"> <div class = "left-side">
+        <div class="user-pic-row">
+        <img class = "user-pic" src="photos/profile-pics/indir.png" alt="">
+        </div>
+        <div class="user-name">Mehmet Eryılmaz</div>
+    </div>
+    <div class = "list-name">Kış Gecesi Filmleri</div>
+    </div>
+<div class = "list-grid">
+    <div class="movie">
+        <div class = "movie-pic-row"><a href="the-last-of-us-page.html">
+            <img  class =  "movie-pic"src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a>
+        </div>
+        <div class="overlay">
+        <div class = "movie-name">The Last Of Us</div>
+        <div class = "movie-rate">8.5 <span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row"> <a href="noctural-animals-page.html">
+            <img class = "movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a></div>
+        <div class = overlay>
+        <div class="movie-name">Noctural Animals</div>
+        <div class="movie-rate">7.9<span>/10</span></div> 
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="shawshank-redemption-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Shawshank Redemption</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-godfather-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjFiZjQ4ZTktMDllYS00M2UxLWJkY2MtOTk3NGZjZTg2MTlhXkEyXkFqcGdeQXVyOTU2NDAzNDE@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-batman-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Batman</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="godfather-2-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather 2</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="twelve-angry-man-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX190_CR0,6,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Twelve Angry Man</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+
+</div>
+</div>
+<div class = "user-lists">
+    <div class = "user-details"> <div class = "left-side">
+        <div class="user-pic-row">
+        <img class = "user-pic" src="photos/profile-pics/indir.png" alt="">
+        </div>
+        <div class="user-name">Mehmet Eryılmaz</div>
+    </div>
+    <div class = "list-name">Kış Gecesi Filmleri</div>
+    </div>
+<div class = "list-grid">
+    <div class="movie">
+        <div class = "movie-pic-row"><a href="the-last-of-us-page.html">
+            <img  class =  "movie-pic"src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a>
+        </div>
+        <div class="overlay">
+        <div class = "movie-name">The Last Of Us</div>
+        <div class = "movie-rate">8.5 <span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row"> <a href="noctural-animals-page.html">
+            <img class = "movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+        </a></div>
+        <div class = overlay>
+        <div class="movie-name">Noctural Animals</div>
+        <div class="movie-rate">7.9<span>/10</span></div> 
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="shawshank-redemption-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Shawshank Redemption</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-godfather-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjFiZjQ4ZTktMDllYS00M2UxLWJkY2MtOTk3NGZjZTg2MTlhXkEyXkFqcGdeQXVyOTU2NDAzNDE@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather</div>
+        <div class =  "movie-rate">9.2<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="the-batman-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Batman</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="godfather-2-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Godfather 2</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="twelve-angry-man-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX190_CR0,6,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name">Twelve Angry Man</div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
