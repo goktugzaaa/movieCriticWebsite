@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <button onclick = "pointsToLetter" >Calculate</button>
+    <script>
+        let johnsMidterm = 55;
+    
+        let johnsFinal = 83;
+        let mikesMidterm = 70;
+        let mikesFinal = 58;
+        pointsToLetter(johnsMidterm,johnsFinal);
+        pointsToLetter(mikesMidterm,mikesFinal);
+        function pointsToLetter(m,f){
+            
+            var totalGrade = (m * 0) + (f * 0.6);
+            if(totalGrade <= 49 & totalGrade >= 36){
+               var letter = 'D';
+            }
+            else if (totalGrade <= 65 & totalGrade >= 50 ){
+              var  letter = 'C';
+            }
+            else if(totalGrade <= 79 & totalGrade >= 66)
+              var   letter  ='B';
+            else if(totalGrade <= 100 & totalGrade >= 80)
+               var letter  ='A';
+            else if(totalGrade <= 0 & totalGrade >= 35)
+               var letter  ='F'
+            console.log(letter)
+        }
+    </script>
+</body>
+</html>

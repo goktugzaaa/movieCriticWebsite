@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script lang="javascript"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* #myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+} */
+
+#myUL, .movie, .overlay, .movie-name {
+  border: 1px solid rgb(241, 241, 241);
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <div class = "movies-grid">
+            
+            <div class="movie">
+                <div class = "movie-pic-row"><a href="the-last-of-us-page.html">
+                    <img  class =  "movie-pic"src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+                </a>
+                </div>
+                <div class="overlay">
+                <div class = "movie-name"> <a href=""> The Last Of Us</a></div>
+                <div class = "movie-rate">8.5 <span>/10</span></div>
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row"> <a href="noctural-animals-page.html">
+                    <img class = "movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTYwMzMwMzgxNl5BMl5BanBnXkFtZTgwMTA0MTUzMDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="">
+                </a></div>
+                <div class = overlay>
+                <div class="movie-name"><a href="">Noctural Animals</a></div>
+                <div class="movie-rate">7.9<span>/10</span></div> 
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row" >
+                    <a href="shawshank-redemption-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+                </div>
+                <div class = overlay>
+                <div class = "movie-name"> <a href="">Shawshank Redemption</a></div>
+                <div class =  "movie-rate">9.2<span>/10</span></div>
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row" >
+                    <a href="the-godfather-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjFiZjQ4ZTktMDllYS00M2UxLWJkY2MtOTk3NGZjZTg2MTlhXkEyXkFqcGdeQXVyOTU2NDAzNDE@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt=""></a>
+                </div>
+                <div class = overlay>
+                <div class = "movie-name">  <a href="">Godfather</a></div>
+                <div class =  "movie-rate">9.2<span>/10</span></div>
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row" >
+                    <a href="the-batman-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+                </div>
+                <div class = overlay>
+                <div class = "movie-name"> <a href="">Batman</a> </div>
+                <div class =  "movie-rate">9.0<span>/10</span></div>
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row" >
+                    <a href="godfather-2-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt=""></a>
+                </div>
+                <div class = overlay>
+                <div class = "movie-name"> <a href="">Godfather 2</a></div>
+                <div class =  "movie-rate">9.0<span>/10</span></div>
+            </div>
+        </div>
+            <div class = "movie">
+                <div class = "movie-pic-row" >
+                    <a href="twelve-angry-man-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX190_CR0,6,190,281_.jpg" alt=""></a>
+                </div>
+                <div class = overlay>
+                <div class = "movie-name"> <a href="">Twelve Angry Man</a></div>
+                <div class =  "movie-rate">9.0<span>/10</span></div>
+            </div>
+        </div>
+
+        <div class = "movie">
+            <div class = "movie-pic-row" >
+                <a href="arrival-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_QL75_UX190_CR0,8,190,281_.jpg" alt=""></a>
+            </div>
+            <div class = overlay>
+            <div class = "movie-name"> <a href="">Arrival</a></div>
+            <div class =  "movie-rate">7.9<span>/10</span></div>
+        </div>
+    </div>
+    <div class = "movie">
+        <div class = "movie-pic-row" >
+            <a href="shindlers-list-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX190_CR0,2,190,281_.jpg" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name"> <a href="">Shindlers List</a></div>
+        <div class =  "movie-rate">9.0<span>/10</span></div>
+    </div>
+    <!-- <div class = "movie">
+        <div >
+            <a href=""><img class="movie-pic" src="" alt=""></a>
+        </div>
+        <div class = overlay>
+        <div class = "movie-name"></div>
+        <div class =  "movie-rate"></div>
+    </div>
+</div>
+    -->
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row">
+        <a href="the-lord-of-the-rings-the-return-pf-the-king.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Lord Of The Rings 3</div>
+    <div class =  "movie-rate">9.0<span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="pulp-fiction-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY281_CR2,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Pulp Fiction</div>
+    <div class =  "movie-rate">8.9 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="iyi-kotu-cirkin-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNjJlYmNkZGItM2NhYy00MjlmLTk5NmQtNjg1NmM2ODU4OTMwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_QL75_UX190_CR0,2,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">İyi,Kötü ve Çirkin</div>
+    <div class =  "movie-rate">8.8 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="forrest-gump-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UY281_CR2,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Forrest Gump</div>
+    <div class =  "movie-rate">8.8 <span>/10</span></div>
+</div>
+</div>
+
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="fight-club-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Fight Club</div>
+    <div class =  "movie-rate">8.8 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row">
+        <a href="inception-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BMjBhZDFmNDMtODUwZC00OWYwLTk5NmItZDA1YmNmMTdlOTc3XkEyXkFqcGdeQXVyOTgxMDMxNTc@._V1_QL75_UY281_CR11,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Inception</div>
+    <div class =  "movie-rate">8.8 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row">
+        <a href="matrix-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX190_CR0,2,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Matrix</div>
+    <div class =  "movie-rate">8.7 <span>/10</span></div>
+</div>
+</div>
+
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="guguk-kusu-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Guguk Kuşu</div>
+    <div class =  "movie-rate">8.7 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row">
+        <a href="parazit-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Parazit</div>
+    <div class =  "movie-rate">8.5 <span>/10</span></div>
+</div>
+</div>
+<div class = "movie">
+    <div class = "movie-pic-row" >
+        <a href="piyanist-page.html"><img class="movie-pic" src="https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY281_CR7,0,190,281_.jpg" alt=""></a>
+    </div>
+    <div class = overlay>
+    <div class = "movie-name">Piyanist</div>
+    <div class =  "movie-rate">8.5 <span>/10</span></div>
+</div>
+</div>
+<script>
+    function myFunction() {
+        var movien,input, filter, moviesGrid,movies, movieName,i, txtValue,a;
+       
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        moviesGrid = document.getElementsByClassName('movies-grid');
+        movies = document.getElementsByClassName('movie');
+        overlay = document.getElementsByClassName('overlay');
+        movieName = document.getElementsByClassName('movie-name');
+        
+            for (i = 0; i < movieName.length; i++) {
+            a = movieName[i]
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+                console.log(movieName[i])
+            } else {
+                movieName[i].style.display = "none";
+            }
+        }
+    }
+    // https://www.youtube.com/watch?v=TlP5WIxVirU izle bunu
+   
+    
+    </script>
+    
+
+</body>
+</html>
